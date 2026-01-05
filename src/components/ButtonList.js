@@ -16,14 +16,25 @@ const ButtonList = () => {
     "New to You",
     "Horror",
     "Placement",
-    "Standup"
+    "Standup",
   ];
 
   return (
-    <div className="flex flex-wrap gap-3 px-4 py-2 overflow-x-auto whitespace-nowrap scrollbar-hide">
-      {topicButton.map((topic, index) => (
-        <Button key={index} name={topic} />
-      ))}
+    <div className="relative">
+      <div className="
+        flex 
+        gap-3 
+        px-4 
+        py-2 
+        overflow-x-auto 
+        whitespace-nowrap 
+        scrollbar-hide
+        max-w-full
+      ">
+        {topicButton.map((topic, index) => (
+          <Button key={index} name={topic} />
+        ))}
+      </div>
     </div>
   );
 };

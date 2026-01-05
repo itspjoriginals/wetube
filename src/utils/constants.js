@@ -4,6 +4,12 @@ export const YT_LOGO = 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b
 
 export const USER_ICON = 'https://img.freepik.com/premium-vector/user-icon-vector_1272330-86.jpg';
 
-const GOOGLE_API_KEY = 'AIzaSyC7W9EHx3vebDBOj_KjJ1NcIn3VdvcqPxw';
+const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 
-export const YOUTUBE_VIDEO_URL = 'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key='+ GOOGLE_API_KEY;
+export const YOUTUBE_VIDEO_URL =
+  "https://youtube.googleapis.com/youtube/v3/videos" +
+  "?part=snippet,contentDetails,statistics" +
+  "&chart=mostPopular" +
+  "&maxResults=50" +
+  "&regionCode=IN" +
+  "&key=" + API_KEY;
