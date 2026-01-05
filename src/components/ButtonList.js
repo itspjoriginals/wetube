@@ -1,9 +1,31 @@
-import React from 'react'
+import Button from "./Button";
 
 const ButtonList = () => {
-  return (
-    <div>ButtonList</div>
-  )
-}
+  const topicButton = [
+    "All",
+    "TMKOC",
+    "2 Sloggers",
+    "DSA",
+    "React",
+    "Gaming",
+    "Cricket",
+    "Vlogs",
+    "Podcasts",
+    "SSC-CGL",
+    "Music",
+    "New to You",
+    "Horror",
+    "Placement",
+    "Standup"
+  ];
 
-export default ButtonList
+  return (
+    <div className="flex flex-wrap gap-3 px-4 py-2 overflow-x-auto whitespace-nowrap scrollbar-hide">
+      {topicButton.map((topic, index) => (
+        <Button key={index} name={topic} />
+      ))}
+    </div>
+  );
+};
+
+export default ButtonList;
